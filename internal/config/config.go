@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gokrazy/internal/instanceflag"
+	"github.com/tailscale/ts-gokrazy/internal/instanceflag"
 )
 
 // InternalCompatibilityFlags keep older gokr-packer behavior or user interface

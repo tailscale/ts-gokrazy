@@ -14,9 +14,9 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"github.com/gokrazy/internal/config"
-	"github.com/gokrazy/internal/gpt"
-	"github.com/gokrazy/internal/rootdev"
+	"github.com/tailscale/ts-gokrazy/internal/config"
+	"github.com/tailscale/ts-gokrazy/internal/gpt"
+	"github.com/tailscale/ts-gokrazy/internal/rootdev"
 )
 
 var flagKeywords = map[string]struct {

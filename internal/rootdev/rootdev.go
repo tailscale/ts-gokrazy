@@ -18,7 +18,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/gokrazy/internal/gpt"
+	"github.com/tailscale/ts-gokrazy/internal/gpt"
 )
 
 var cmdlineFile = "/proc/cmdline" // for testing

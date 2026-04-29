@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"syscall"
 
-	"github.com/gokrazy/internal/rootdev"
+	"github.com/tailscale/ts-gokrazy/internal/rootdev"
 	"golang.org/x/sys/unix"
 )
 

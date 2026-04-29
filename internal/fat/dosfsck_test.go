@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gokrazy/internal/fat"
+	"github.com/tailscale/ts-gokrazy/internal/fat"
 )
 
 func TestDosfsck(t *testing.T) {

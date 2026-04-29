@@ -25,8 +25,8 @@ import (
 	"github.com/mdlayher/watchdog"
 	"golang.org/x/sys/unix"
 
-	"github.com/gokrazy/gokrazy/internal/iface"
-	"github.com/gokrazy/internal/rootdev"
+	"github.com/tailscale/ts-gokrazy/internal/iface"
+	"github.com/tailscale/ts-gokrazy/internal/rootdev"
 )
 
 var (

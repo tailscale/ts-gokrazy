@@ -21,9 +21,9 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"github.com/gokrazy/internal/deviceconfig"
-	"github.com/gokrazy/internal/fat"
-	"github.com/gokrazy/internal/rootdev"
+	"github.com/tailscale/ts-gokrazy/internal/deviceconfig"
+	"github.com/tailscale/ts-gokrazy/internal/fat"
+	"github.com/tailscale/ts-gokrazy/internal/rootdev"
 	"github.com/google/renameio/v2"
 )
 

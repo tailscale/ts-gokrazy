@@ -18,9 +18,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gokrazy/gokrazy/internal/assets"
-	"github.com/gokrazy/internal/config"
-	"github.com/gokrazy/internal/rootdev"
+	"github.com/tailscale/ts-gokrazy/internal/assets"
+	"github.com/tailscale/ts-gokrazy/internal/config"
+	"github.com/tailscale/ts-gokrazy/internal/rootdev"
 
 	"golang.org/x/sys/unix"
 )

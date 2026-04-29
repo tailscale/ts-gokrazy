@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gokrazy/internal/fat"
-	"github.com/gokrazy/internal/rootdev"
+	"github.com/tailscale/ts-gokrazy/internal/fat"
+	"github.com/tailscale/ts-gokrazy/internal/rootdev"
 )
 
 type eepromVersion struct {
