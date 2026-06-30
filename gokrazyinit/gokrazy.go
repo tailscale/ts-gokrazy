@@ -99,7 +99,9 @@ func runWatchdog() {
 }
 
 // cmdlineContains reports whether the kernel command line contains the given
-// space-delimited parameter. It reads /proc/cmdline if available, otherwise
+// parameter. It matches both bare flags (e.g. "nowatchdog") and key=value
+// pairs (e.g. "gokrazy.log_to_serial=1" matches param
+// "gokrazy.log_to_serial"). It reads /proc/cmdline if available, otherwise
 // falls back to /sys/firmware/devicetree/base/chosen/bootargs.
 func cmdlineContains(param string) bool {
 	b, err := os.ReadFile("/proc/cmdline")
@@ -107,7 +109,11 @@ func cmdlineContains(param string) bool {
 		b, _ = os.ReadFile("/sys/firmware/devicetree/base/chosen/bootargs")
 	}
 	for field := range strings.SplitSeq(string(b), " ") {
-		if strings.TrimSpace(field) == param {
+		field = strings.TrimSpace(field)
+		if field == param {
+			return true
+		}
+		if k, _, ok := strings.Cut(field, "="); ok && k == param {
 			return true
 		}
 	}

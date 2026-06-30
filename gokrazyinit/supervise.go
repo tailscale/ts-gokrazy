@@ -432,7 +432,9 @@ func getSerialConsole() io.Writer {
 	serialConsole.once.Do(func() {
 		f, err := os.OpenFile("/dev/console", os.O_WRONLY|os.O_APPEND, 0)
 		if err != nil {
-			serialConsole.w = io.Discard
+			// Fall back to stdout, which on gokrazy init is inherited from
+			// the kernel and points at the serial console.
+			serialConsole.w = os.Stdout
 		} else {
 			serialConsole.w = f
 		}
